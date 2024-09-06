@@ -22,9 +22,9 @@ const Create = () => {
     }
 
     return (
-        <div className="flex justify-center">
-            <form className="flex flex-col space-y-4 p-6" onSubmit={createAccount}>
-                <h1 className="text-3xl text-center font-playfair">Create a New Account</h1>
+        <div className="flex justify-center w-full">
+            <form className="flex flex-col space-y-4 p-6 w-[400px]" onSubmit={createAccount}>
+                <h1 className="text-3xl text-center font-lato">Create a New Account</h1>
                 <input
                     className="p-2 border border-gray-300 rounded"
                     type="email"
@@ -43,9 +43,9 @@ const Create = () => {
                 >
                     Create Account
                 </button>
-                <p>Already have an account? <Link to="/login">Login</Link></p>
+                <p className="text-center font-lato">Already have an account? <Link to="/login">Login</Link></p>
             </form>
-            
+
         </div>
     )
 };
