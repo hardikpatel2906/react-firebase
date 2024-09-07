@@ -52,8 +52,15 @@ const Create = () => {
                 </form>
 
             </div>
-            <div className="flex justify-center w-full">
-                <button className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600" onClick={logGoogleUser}>Signin with Google</button>
+            <div className="flex justify-center flex-col w-full space-y-4">
+                <p className="text-center font-lato text-xl">SignIn With</p>
+                <div className="flex justify-center flex-row">
+                    <img className="h-20" src="./google.png" alt="Google" onClick={logGoogleUser} />
+                    <img className="h-20" src="./twitter.png" alt="Twitter" />
+                    <img className="h-20" src="./facebook.png" alt="Facebook" />
+                    <img className="h-20" src="./github.png" alt="Github" />
+                </div>
+                {/* <button className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600" onClick={logGoogleUser}>Signin with Google</button> */}
             </div>
         </>
     )
