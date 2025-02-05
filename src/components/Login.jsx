@@ -104,7 +104,7 @@ const Login = () => {
 
     const logGoogleUser = async () => {
         try {
-            const response = await signInWithGooglePopup();
+            await signInWithGooglePopup();
             navigate("/home")
         } catch (error) {
             console.log("Google login error:", error)
