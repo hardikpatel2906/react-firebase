@@ -71,16 +71,20 @@
 import { useState } from "react";
 import { auth } from "../firebase-config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Create = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const createAccount = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => console.log(userCredential))
+            .then((userCredential) => {
+                navigate("/login")
+                console.log(userCredential)
+            })
             .catch((err) => console.log(err));
     };
 
