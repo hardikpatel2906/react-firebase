@@ -97,7 +97,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // console.log(userCredential)
-                navigate("/home")
+                navigate("/")
             })
             .catch((err) => console.log(err));
     };
@@ -105,7 +105,7 @@ const Login = () => {
     const logGoogleUser = async () => {
         try {
             await signInWithGooglePopup();
-            navigate("/home")
+            navigate("/")
         } catch (error) {
             console.log("Google login error:", error)
         }
